@@ -1,747 +1,2564 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto-école Le Berrah | Excellence & Réussite</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-école Le Berrah — Permis de conduire à Bamako | Niamana</title>
+  <meta name="description"
+    content="Auto-école Le Berrah à Niamana, Bamako. Formation au permis poids léger et poids lourd, code de la route, services administratifs. Inscription dès 80 000 F CFA.">
+  <meta property="og:title" content="Auto-école Le Berrah — Excellence & Réussite">
+  <meta property="og:description"
+    content="L'auto-école moderne de Niamana. Pédagogie innovante, moniteurs expérimentés, réussite garantie.">
+  <meta property="og:type" content="website">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d1b2a'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%23f5b301'>B</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
-    <style>
-        :root {
-            --primary: #0f4c75;
-            --primary-light: #3282b8;
-            --secondary: #f39c12; /* Or plus élégant */
-            --accent: #e63946;
-            --dark: #1b262c;
-            --light: #f9f9f9;
-            --white: #ffffff;
-            --shadow-sm: 0 5px 15px rgba(0,0,0,0.05);
-            --shadow-lg: 0 15px 35px rgba(0,0,0,0.1);
-            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
+  <style>
+    /* ============ BASE ============ */
+    :root {
+      --ink: #0d1b2a;
+      --ink-2: #13253a;
+      --ink-3: #1b3a5b;
+      --blue: #1f6fb2;
+      --blue-soft: #e8f2fa;
+      --gold: #f5b301;
+      --gold-deep: #e09600;
+      --paper: #f7f9fc;
+      --white: #ffffff;
+      --text: #33465c;
+      --text-light: #8aa0b6;
+      --radius: 20px;
+      --shadow-sm: 0 4px 20px rgba(13, 27, 42, .06);
+      --shadow-lg: 0 24px 60px rgba(13, 27, 42, .14);
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px
+    }
 
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            overflow-x: hidden;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--paper);
+      overflow-x: hidden;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        h1, h2, h3, .logo-text h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-        }
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--ink);
+      line-height: 1.15
+    }
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 25px;
-        }
+    img {
+      max-width: 100%;
+      display: block
+    }
 
-        /* --- NAVIGATION --- */
-        header {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: var(--transition);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
+    a {
+      text-decoration: none;
+      color: inherit
+    }
 
-        header.scrolled {
-            padding: 5px 0;
-            box-shadow: var(--shadow-lg);
-        }
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px
+    }
 
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-        }
+    section {
+      padding: 110px 0;
+      position: relative
+    }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-decoration: none;
-        }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 16px;
+    }
 
-        .logo-img-placeholder {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.5rem;
-            box-shadow: var(--shadow-sm);
-        }
+    .eyebrow::before {
+      content: '';
+      width: 26px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px
+    }
 
-        .logo-text h1 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            letter-spacing: -1px;
-            line-height: 1;
-        }
+    .section-head {
+      max-width: 640px;
+      margin-bottom: 64px
+    }
 
-        .logo-text span {
-            color: var(--secondary);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-        }
+    .section-head.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center
+    }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 35px;
-        }
+    .section-head.center .eyebrow::after {
+      content: '';
+      width: 26px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px
+    }
 
-        nav a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            position: relative;
-        }
+    .section-head h2 {
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      font-weight: 800;
+      letter-spacing: -.02em
+    }
 
-        nav a:hover {
-            color: var(--primary);
-        }
+    .section-head p {
+      margin-top: 16px;
+      font-size: 1.05rem;
+      color: var(--text-light)
+    }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            border-radius: 5px;
-            background: var(--secondary);
-            transition: var(--transition);
-        }
+    /* ============ REVEAL ANIMATIONS ============ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity .9s var(--ease), transform .9s var(--ease)
+    }
 
-        nav a:hover::after {
-            width: 100%;
-        }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none
+    }
 
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--primary);
-            cursor: pointer;
-        }
+    .reveal[data-delay="1"] {
+      transition-delay: .1s
+    }
 
-        /* --- HERO SECTION --- */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(15, 76, 117, 0.7), rgba(27, 38, 44, 0.85)), 
-                        url('https://images.unsplash.com/photo-1449960232330-79ba99d70d91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            color: white;
-            text-align: left;
-        }
+    .reveal[data-delay="2"] {
+      transition-delay: .2s
+    }
 
-        .hero-content {
-            max-width: 700px;
-        }
+    .reveal[data-delay="3"] {
+      transition-delay: .3s
+    }
 
-        .hero h2 {
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 25px;
-            animation: fadeInUp 1s ease forwards;
-        }
+    .reveal[data-delay="4"] {
+      transition-delay: .4s
+    }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease 0.2s forwards;
-        }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none
+      }
 
-        .btn-group {
-            display: flex;
-            gap: 20px;
-            animation: fadeInUp 1s ease 0.4s forwards;
-        }
+      html {
+        scroll-behavior: auto
+      }
+    }
 
-        .cta-button {
-            display: inline-block;
-            background: var(--secondary);
-            color: white;
-            padding: 18px 40px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: var(--transition);
-            box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
-            border: 2px solid var(--secondary);
-        }
+    /* ============ PROGRESS BAR ============ */
+    #progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--gold), var(--gold-deep));
+      z-index: 2000;
+      transition: width .1s linear
+    }
 
-        .cta-button:hover {
-            background: transparent;
-            color: var(--secondary);
-            transform: translateY(-5px);
-        }
+    /* ============ HEADER ============ */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: background .4s var(--ease), box-shadow .4s var(--ease), padding .4s var(--ease);
+      padding: 18px 0;
+    }
 
-        .cta-secondary {
-            background: transparent;
-            border: 2px solid white;
-            box-shadow: none;
-        }
+    header.scrolled {
+      background: rgba(255, 255, 255, .88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 8px 32px rgba(13, 27, 42, .08);
+      padding: 10px 0;
+    }
 
-        .cta-secondary:hover {
-            background: white;
-            color: var(--primary);
-        }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
 
-        /* --- SECTIONS --- */
-        section {
-            padding: 120px 0;
-        }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 80px;
-        }
+    .logo-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--ink) 0%, var(--ink-3) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 800;
+      font-size: 1.35rem;
+      box-shadow: 0 8px 20px rgba(13, 27, 42, .25);
+    }
 
-        .section-title span {
-            color: var(--secondary);
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 3px;
-            font-size: 0.9rem;
-        }
+    .logo-name {
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -.02em;
+      color: var(--ink);
+      line-height: 1.1
+    }
 
-        .section-title h2 {
-            font-size: 2.8rem;
-            color: var(--primary);
-            margin-top: 10px;
-        }
+    .logo-name small {
+      display: block;
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold-deep)
+    }
 
-        /* --- SERVICES CARDS --- */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
+    header:not(.scrolled) .logo-name {
+      color: #fff
+    }
 
-        .service-card {
-            background: var(--white);
-            border-radius: 24px;
-            padding: 50px 40px;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(0,0,0,0.03);
-            box-shadow: var(--shadow-sm);
-        }
+    @media (min-width:901px) {
+      header:not(.scrolled) .nav-links a:not(.nav-cta) {
+        color: #fff
+      }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 5px;
-            background: var(--primary);
-            transform: scaleX(0);
-            transition: var(--transition);
-            transform-origin: left;
-        }
+      header:not(.scrolled) .nav-cta {
+        background: var(--gold);
+        color: var(--ink) !important;
+        box-shadow: 0 6px 18px rgba(245, 179, 1, .3)
+      }
 
-        .service-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--shadow-lg);
-            border-color: transparent;
-        }
+      header:not(.scrolled) .nav-cta:hover {
+        background: #ffc933
+      }
+    }
 
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
+    @media (max-width:900px) {
 
-        .service-icon {
-            font-size: 3rem;
-            color: var(--primary-light);
-            margin-bottom: 25px;
-            display: inline-block;
-        }
+      header:not(.scrolled) .burger span,
+      header:not(.scrolled) .burger span::before,
+      header:not(.scrolled) .burger span::after {
+        background: #fff
+      }
+    }
 
-        .service-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-        }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      list-style: none
+    }
 
-        .price-badge {
-            background: rgba(48, 131, 184, 0.1);
-            color: var(--primary);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 1.3rem;
-            margin: 20px 0;
-            display: inline-block;
-        }
+    .nav-links a {
+      font-size: .92rem;
+      font-weight: 600;
+      color: var(--ink);
+      position: relative;
+      transition: color .3s
+    }
 
-        .service-card ul {
-            list-style: none;
-            margin-top: 25px;
-        }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform .35s var(--ease)
+    }
 
-        .service-card li {
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #555;
-        }
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      transform: scaleX(1);
+      transform-origin: left
+    }
 
-        .service-card li i {
-            color: #2ecc71;
-            font-size: 0.9rem;
-        }
+    .nav-cta {
+      background: var(--ink);
+      color: #fff !important;
+      padding: 11px 24px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: .88rem;
+      transition: transform .3s var(--ease), box-shadow .3s, background .3s;
+      box-shadow: 0 6px 18px rgba(13, 27, 42, .22);
+    }
 
-        /* --- INSCRIPTION SECTION (GLASSMORPHISM) --- */
-        .inscription-box {
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            border-radius: 30px;
-            padding: 60px;
-            color: white;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-            box-shadow: 0 20px 40px rgba(15, 76, 117, 0.3);
-        }
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      background: var(--ink-3);
+      box-shadow: 0 12px 26px rgba(13, 27, 42, .3)
+    }
 
-        .doc-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            transition: var(--transition);
-        }
+    .nav-cta::after {
+      display: none
+    }
 
-        .doc-card:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateX(10px);
-        }
+    .burger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1102;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      align-items: center;
+      justify-content: center
+    }
 
-        .doc-card i {
-            font-size: 2rem;
-            color: var(--secondary);
-        }
+    .burger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: .35s var(--ease);
+      position: relative
+    }
 
-        /* --- CONTACT SECTION --- */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 40px;
-            background: white;
-            padding: 20px;
-            border-radius: 30px;
-            box-shadow: var(--shadow-lg);
-        }
+    .burger span::before,
+    .burger span::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: .35s var(--ease)
+    }
 
-        .contact-info-panel {
-            background: var(--dark);
-            color: white;
-            padding: 50px;
-            border-radius: 25px;
-        }
+    .burger span::before {
+      top: -7px
+    }
 
-        .contact-item {
-            margin-bottom: 35px;
-            display: flex;
-            gap: 20px;
-        }
+    .burger span::after {
+      top: 7px
+    }
 
-        .contact-item .icon-box {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--secondary);
-            font-size: 1.2rem;
-        }
+    .burger.open span {
+      background: transparent
+    }
 
-        .map-iframe {
-            border-radius: 25px;
-            width: 100%;
-            height: 100%;
-            min-height: 400px;
-        }
+    .burger.open span::before {
+      top: 0;
+      transform: rotate(45deg)
+    }
 
-        /* --- FOOTER --- */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 100px 0 40px;
-        }
+    .burger.open span::after {
+      top: 0;
+      transform: rotate(-45deg)
+    }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 80px;
-            margin-bottom: 60px;
-        }
+    /* mobile nav */
+    @media (max-width:900px) {
+      .burger {
+        display: flex
+      }
 
-        .footer-logo h3 {
-            color: white;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-        }
+      .nav-links {
+        position: fixed;
+        inset: 0;
+        background: rgba(13, 27, 42, .98);
+        flex-direction: column;
+        justify-content: center;
+        gap: 36px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .4s var(--ease), visibility .4s;
+        z-index: 1101;
+      }
 
-        .footer-logo span {
-            color: var(--secondary);
-        }
+      .nav-links.open {
+        opacity: 1;
+        visibility: visible
+      }
 
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
+      .nav-links a {
+        color: #fff;
+        font-size: 1.3rem;
+        font-family: 'Plus Jakarta Sans';
+        font-weight: 700
+      }
 
-        .social-links a {
-            width: 45px;
-            height: 45px;
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: var(--transition);
-        }
+      .nav-links .nav-cta {
+        background: var(--gold);
+        color: var(--ink) !important
+      }
 
-        .social-links a:hover {
-            background: var(--secondary);
-            transform: translateY(-5px);
-        }
+      .nav-links.open li {
+        animation: navIn .5s var(--ease) backwards
+      }
 
-        .copyright {
-            text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 0.9rem;
-            color: #888;
-        }
+      .nav-links.open li:nth-child(1) {
+        animation-delay: .05s
+      }
 
-        /* --- ANIMATIONS --- */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+      .nav-links.open li:nth-child(2) {
+        animation-delay: .1s
+      }
 
-        /* --- RESPONSIVE --- */
-        @media (max-width: 992px) {
-            .hero h2 { font-size: 3rem; }
-            .inscription-box, .contact-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
-        }
+      .nav-links.open li:nth-child(3) {
+        animation-delay: .15s
+      }
 
-        @media (max-width: 768px) {
-            nav ul {
-                position: fixed;
-                top: 0; right: -100%;
-                width: 80%; height: 100vh;
-                background: white;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: 0.5s;
-                box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-            }
-            nav ul.active { right: 0; }
-            .mobile-menu-btn { display: block; }
-            .hero h2 { font-size: 2.5rem; }
-            .btn-group { flex-direction: column; }
-        }
-    </style>
+      .nav-links.open li:nth-child(4) {
+        animation-delay: .2s
+      }
+
+      .nav-links.open li:nth-child(5) {
+        animation-delay: .25s
+      }
+
+      .nav-links.open li:nth-child(6) {
+        animation-delay: .3s
+      }
+
+      body.nav-open header .burger span,
+      body.nav-open header .burger span::before,
+      body.nav-open header .burger span::after {
+        background: #fff
+      }
+
+      body.nav-open .burger.open span {
+        background: transparent
+      }
+    }
+
+    @keyframes navIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      padding: 150px 0 90px;
+      background:
+        linear-gradient(112deg, rgba(9, 20, 32, .94) 0%, rgba(13, 27, 42, .82) 46%, rgba(13, 27, 42, .45) 100%),
+        url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 140px;
+      background: linear-gradient(to top, var(--paper), transparent);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 60px;
+      align-items: center
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .16);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-size: .82rem;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+
+    .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #3ddc84;
+      box-shadow: 0 0 0 0 rgba(61, 220, 132, .6);
+      animation: pulse 2s infinite
+    }
+
+    @keyframes pulse {
+      70% {
+        box-shadow: 0 0 0 9px rgba(61, 220, 132, 0)
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(61, 220, 132, 0)
+      }
+    }
+
+    .hero h1 {
+      color: #fff;
+      font-size: clamp(2.4rem, 5.6vw, 4.1rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 .gold {
+      background: linear-gradient(90deg, #ffd457, var(--gold));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p.lead {
+      color: rgba(255, 255, 255, .82);
+      font-size: 1.12rem;
+      max-width: 540px;
+      margin-bottom: 40px
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 56px
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 34px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: transform .35s var(--ease), box-shadow .35s, background .35s, color .35s;
+      cursor: pointer;
+      border: none;
+      font-family: 'Plus Jakarta Sans';
+    }
+
+    .btn-gold {
+      background: linear-gradient(120deg, #ffc933, var(--gold-deep));
+      color: var(--ink);
+      box-shadow: 0 12px 30px rgba(245, 179, 1, .35)
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(245, 179, 1, .45)
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, .07);
+      color: #fff;
+      border: 1.5px solid rgba(255, 255, 255, .35);
+      backdrop-filter: blur(6px)
+    }
+
+    .btn-ghost:hover {
+      background: #fff;
+      color: var(--ink);
+      transform: translateY(-3px)
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 0;
+      border-top: 1px solid rgba(255, 255, 255, .14);
+      padding-top: 34px;
+      max-width: 560px
+    }
+
+    .stat {
+      flex: 1;
+      padding-right: 28px
+    }
+
+    .stat+.stat {
+      padding-left: 28px;
+      border-left: 1px solid rgba(255, 255, 255, .14)
+    }
+
+    .stat .num {
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 800;
+      font-size: 2rem;
+      color: #fff;
+      letter-spacing: -.02em
+    }
+
+    .stat .num em {
+      color: var(--gold);
+      font-style: normal
+    }
+
+    .stat .lbl {
+      font-size: .8rem;
+      color: rgba(255, 255, 255, .6);
+      margin-top: 2px
+    }
+
+    /* hero card */
+    .hero-card {
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .14);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius: 26px;
+      padding: 34px;
+      color: #fff;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
+      animation: float 7s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-14px)
+      }
+    }
+
+    .hero-card h3 {
+      color: #fff;
+      font-size: 1.15rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .hero-card h3 svg {
+      width: 22px;
+      height: 22px;
+      color: var(--gold)
+    }
+
+    .hc-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    .hc-row:last-of-type {
+      border-bottom: none
+    }
+
+    .hc-ico {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: rgba(245, 179, 1, .15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0
+    }
+
+    .hc-ico svg {
+      width: 19px;
+      height: 19px;
+      color: var(--gold)
+    }
+
+    .hc-row b {
+      display: block;
+      font-size: .92rem;
+      font-weight: 700
+    }
+
+    .hc-row span {
+      font-size: .8rem;
+      color: rgba(255, 255, 255, .6)
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 26px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      width: 26px;
+      height: 42px;
+      border: 2px solid rgba(255, 255, 255, .4);
+      border-radius: 16px;
+    }
+
+    .scroll-hint::before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 8px;
+      border-radius: 4px;
+      background: var(--gold);
+      animation: wheel 1.8s infinite;
+    }
+
+    @keyframes wheel {
+      0% {
+        opacity: 1;
+        top: 7px
+      }
+
+      70% {
+        opacity: 0;
+        top: 22px
+      }
+
+      100% {
+        opacity: 0;
+        top: 7px
+      }
+    }
+
+    /* ============ MARQUEE ============ */
+    .marquee {
+      background: var(--ink);
+      padding: 20px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      gap: 56px;
+      animation: scrollX 30s linear infinite;
+      padding-right: 56px
+    }
+
+    .marquee span {
+      color: rgba(255, 255, 255, .75);
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 700;
+      font-size: .9rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 18px
+    }
+
+    .marquee span::after {
+      content: '✦';
+      color: var(--gold);
+      font-size: .8rem
+    }
+
+    @keyframes scrollX {
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* ============ WHY US ============ */
+    .why {
+      background: var(--paper)
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 26px
+    }
+
+    .why-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      border: 1px solid rgba(13, 27, 42, .05);
+      box-shadow: var(--shadow-sm);
+      transition: transform .45s var(--ease), box-shadow .45s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-deep));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .45s var(--ease);
+    }
+
+    .why-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg)
+    }
+
+    .why-card:hover::after {
+      transform: scaleX(1)
+    }
+
+    .why-ico {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      margin-bottom: 22px;
+      background: linear-gradient(135deg, var(--blue-soft), #f2f8fd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .45s var(--ease);
+    }
+
+    .why-card:hover .why-ico {
+      transform: scale(1.1) rotate(-5deg)
+    }
+
+    .why-ico svg {
+      width: 26px;
+      height: 26px;
+      color: var(--blue)
+    }
+
+    .why-card h3 {
+      font-size: 1.08rem;
+      margin-bottom: 10px
+    }
+
+    .why-card p {
+      font-size: .9rem;
+      color: var(--text-light)
+    }
+
+    /* ============ FORMATIONS ============ */
+    .formations {
+      background: linear-gradient(180deg, var(--paper) 0%, #eef3f9 100%)
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      align-items: stretch
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 26px;
+      padding: 44px 36px;
+      border: 1px solid rgba(13, 27, 42, .06);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform .5s var(--ease), box-shadow .5s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-12px);
+      box-shadow: var(--shadow-lg)
+    }
+
+    .card.featured {
+      background: linear-gradient(160deg, var(--ink) 0%, var(--ink-3) 100%);
+      border: none;
+    }
+
+    .card.featured h3,
+    .card.featured .price {
+      color: #fff
+    }
+
+    .card.featured p,
+    .card.featured li {
+      color: rgba(255, 255, 255, .75)
+    }
+
+    .card .tag {
+      position: absolute;
+      top: 22px;
+      right: -40px;
+      transform: rotate(45deg);
+      background: var(--gold);
+      color: var(--ink);
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 6px 46px;
+    }
+
+    .card-ico {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      margin-bottom: 26px;
+      background: linear-gradient(135deg, rgba(245, 179, 1, .16), rgba(245, 179, 1, .05));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-ico svg {
+      width: 30px;
+      height: 30px;
+      color: var(--gold-deep)
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px
+    }
+
+    .card>p {
+      font-size: .92rem;
+      color: var(--text-light);
+      margin-bottom: 24px
+    }
+
+    .price {
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 800;
+      font-size: 2rem;
+      color: var(--ink);
+      letter-spacing: -.02em;
+      margin-bottom: 4px
+    }
+
+    .price small {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--text-light)
+    }
+
+    .card ul {
+      list-style: none;
+      margin: 24px 0 34px;
+      flex: 1
+    }
+
+    .card li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 9px 0;
+      font-size: .92rem
+    }
+
+    .card li svg {
+      width: 19px;
+      height: 19px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: #2fb573
+    }
+
+    .card.featured li svg {
+      color: var(--gold)
+    }
+
+    .card .btn {
+      width: 100%
+    }
+
+    .btn-dark {
+      background: var(--ink);
+      color: #fff
+    }
+
+    .btn-dark:hover {
+      background: var(--ink-3);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(13, 27, 42, .25)
+    }
+
+    /* ============ ÉTAPES ============ */
+    .steps {
+      background: var(--white)
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      counter-reset: step
+    }
+
+    .step {
+      position: relative;
+      padding: 36px 26px 30px;
+      border-radius: var(--radius);
+      background: var(--paper);
+      border: 1px solid rgba(13, 27, 42, .05);
+      transition: transform .45s var(--ease), box-shadow .45s, background .45s
+    }
+
+    .step:hover {
+      transform: translateY(-8px);
+      background: var(--white);
+      box-shadow: var(--shadow-lg)
+    }
+
+    .step .n {
+      counter-increment: step;
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 800;
+      font-size: 2.6rem;
+      background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .step .n::before {
+      content: '0' counter(step)
+    }
+
+    .step h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px
+    }
+
+    .step p {
+      font-size: .88rem;
+      color: var(--text-light)
+    }
+
+    .step::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -24px;
+      width: 24px;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, var(--gold) 0 5px, transparent 5px 10px);
+    }
+
+    .step:last-child::after {
+      display: none
+    }
+
+    /* ============ INSCRIPTION ============ */
+    .inscription {
+      background: linear-gradient(180deg, var(--white) 0%, var(--paper) 100%)
+    }
+
+    .insc-box {
+      background: linear-gradient(135deg, var(--ink) 0%, var(--ink-3) 85%);
+      border-radius: 32px;
+      padding: 70px 60px;
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(13, 27, 42, .35);
+    }
+
+    .insc-box::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 179, 1, .18), transparent 65%);
+    }
+
+    .insc-box::after {
+      content: '';
+      position: absolute;
+      bottom: -140px;
+      left: -80px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(31, 111, 178, .25), transparent 65%);
+    }
+
+    .insc-box h2 {
+      color: #fff;
+      font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1
+    }
+
+    .insc-box .sub {
+      color: rgba(255, 255, 255, .72);
+      margin-bottom: 36px;
+      position: relative;
+      z-index: 1
+    }
+
+    .doc {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 18px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      transition: transform .4s var(--ease), background .4s;
+    }
+
+    .doc:hover {
+      transform: translateX(10px);
+      background: rgba(255, 255, 255, .12)
+    }
+
+    .doc-ico {
+      width: 46px;
+      height: 46px;
+      border-radius: 13px;
+      background: rgba(245, 179, 1, .16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0
+    }
+
+    .doc-ico svg {
+      width: 22px;
+      height: 22px;
+      color: var(--gold)
+    }
+
+    .doc b {
+      display: block;
+      font-family: 'Plus Jakarta Sans';
+      font-size: 1rem
+    }
+
+    .doc span {
+      font-size: .84rem;
+      color: rgba(255, 255, 255, .6)
+    }
+
+    .insc-cta {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 24px;
+      padding: 46px 36px
+    }
+
+    .insc-cta .from {
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: rgba(255, 255, 255, .6)
+    }
+
+    .insc-cta .big {
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 800;
+      font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+      letter-spacing: -.02em;
+      background: linear-gradient(90deg, #ffd457, var(--gold));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 8px 0 6px;
+    }
+
+    .insc-cta .cur {
+      color: rgba(255, 255, 255, .7);
+      font-size: .95rem;
+      margin-bottom: 30px
+    }
+
+    .insc-cta .btn {
+      width: 100%
+    }
+
+    .insc-note {
+      margin-top: 18px;
+      font-size: .8rem;
+      color: rgba(255, 255, 255, .55)
+    }
+
+    /* ============ TÉMOIGNAGES ============ */
+    .temoignages {
+      background: var(--paper)
+    }
+
+    .temoin-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px
+    }
+
+    .temoin {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 38px 32px;
+      border: 1px solid rgba(13, 27, 42, .05);
+      box-shadow: var(--shadow-sm);
+      transition: transform .45s var(--ease), box-shadow .45s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .temoin:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg)
+    }
+
+    .stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 20px
+    }
+
+    .stars svg {
+      width: 17px;
+      height: 17px;
+      color: var(--gold)
+    }
+
+    .temoin p {
+      font-size: .95rem;
+      color: var(--text);
+      flex: 1;
+      font-style: italic
+    }
+
+    .temoin-who {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 26px
+    }
+
+    .avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 800;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .temoin-who b {
+      display: block;
+      font-family: 'Plus Jakarta Sans';
+      font-size: .95rem;
+      color: var(--ink)
+    }
+
+    .temoin-who span {
+      font-size: .8rem;
+      color: var(--text-light)
+    }
+
+    /* ============ FAQ ============ */
+    .faq {
+      background: var(--white)
+    }
+
+    .faq-list {
+      max-width: 780px;
+      margin: 0 auto
+    }
+
+    .faq-item {
+      border: 1px solid rgba(13, 27, 42, .08);
+      border-radius: 18px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      background: var(--paper);
+      transition: box-shadow .4s, background .4s
+    }
+
+    .faq-item.open {
+      background: var(--white);
+      box-shadow: var(--shadow-sm)
+    }
+
+    .faq-q {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+
+    .faq-q .chev {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--blue-soft);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .4s var(--ease), background .4s;
+    }
+
+    .faq-q .chev svg {
+      width: 15px;
+      height: 15px;
+      color: var(--blue)
+    }
+
+    .faq-item.open .chev {
+      transform: rotate(180deg);
+      background: var(--gold)
+    }
+
+    .faq-item.open .chev svg {
+      color: var(--ink)
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .5s var(--ease)
+    }
+
+    .faq-a p {
+      padding: 0 28px 24px;
+      font-size: .93rem;
+      color: var(--text-light)
+    }
+
+    /* ============ CONTACT ============ */
+    .contact {
+      background: linear-gradient(180deg, var(--white) 0%, var(--paper) 100%)
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 0;
+      background: var(--white);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(13, 27, 42, .05);
+    }
+
+    .contact-panel {
+      background: linear-gradient(160deg, var(--ink), var(--ink-3));
+      color: #fff;
+      padding: 56px 46px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .contact-panel::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      right: -100px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 179, 1, .15), transparent 65%)
+    }
+
+    .contact-panel h3 {
+      color: #fff;
+      font-size: 1.5rem;
+      margin-bottom: 10px
+    }
+
+    .contact-panel .sub {
+      color: rgba(255, 255, 255, .65);
+      font-size: .92rem;
+      margin-bottom: 40px
+    }
+
+    .c-item {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1
+    }
+
+    .c-ico {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background .3s, transform .3s
+    }
+
+    .c-item:hover .c-ico {
+      background: rgba(245, 179, 1, .18);
+      transform: scale(1.06)
+    }
+
+    .c-ico svg {
+      width: 21px;
+      height: 21px;
+      color: var(--gold)
+    }
+
+    .c-item b {
+      display: block;
+      font-family: 'Plus Jakarta Sans';
+      font-size: .95rem;
+      margin-bottom: 2px
+    }
+
+    .c-item p,
+    .c-item a {
+      font-size: .88rem;
+      color: rgba(255, 255, 255, .65);
+      transition: color .3s
+    }
+
+    .c-item a:hover {
+      color: var(--gold)
+    }
+
+    .socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 38px;
+      position: relative;
+      z-index: 1
+    }
+
+    .socials a {
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .35s, transform .35s var(--ease);
+    }
+
+    .socials a:hover {
+      background: var(--gold);
+      transform: translateY(-4px)
+    }
+
+    .socials svg {
+      width: 19px;
+      height: 19px;
+      color: #fff;
+      transition: color .35s
+    }
+
+    .socials a:hover svg {
+      color: var(--ink)
+    }
+
+    .map-wrap {
+      min-height: 480px
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      filter: saturate(.9)
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: var(--ink);
+      color: rgba(255, 255, 255, .65);
+      padding: 80px 0 0
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 60px
+    }
+
+    .footer-brand p {
+      font-size: .9rem;
+      margin-top: 18px;
+      max-width: 300px
+    }
+
+    footer h4 {
+      color: #fff;
+      font-size: .95rem;
+      margin-bottom: 22px;
+      letter-spacing: .04em
+    }
+
+    footer ul {
+      list-style: none
+    }
+
+    footer li {
+      margin-bottom: 12px
+    }
+
+    footer a {
+      font-size: .88rem;
+      transition: color .3s, padding-left .3s
+    }
+
+    .footer-grid a:hover {
+      color: var(--gold);
+      padding-left: 6px
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: .85rem;
+      margin-bottom: 12px;
+      gap: 16px
+    }
+
+    .hours-row b {
+      color: rgba(255, 255, 255, .85);
+      font-weight: 600
+    }
+
+    .hours-row .closed {
+      color: #e07070
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding: 26px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: .82rem
+    }
+
+    .footer-bottom .heart {
+      color: var(--gold)
+    }
+
+    /* ============ FLOATING ============ */
+    .wa-float {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      z-index: 900;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 30px rgba(37, 211, 102, .4);
+      transition: transform .35s var(--ease);
+      animation: waPulse 2.6s infinite;
+    }
+
+    @keyframes waPulse {
+      0% {
+        box-shadow: 0 12px 30px rgba(37, 211, 102, .4), 0 0 0 0 rgba(37, 211, 102, .45)
+      }
+
+      70% {
+        box-shadow: 0 12px 30px rgba(37, 211, 102, .4), 0 0 0 16px rgba(37, 211, 102, 0)
+      }
+
+      100% {
+        box-shadow: 0 12px 30px rgba(37, 211, 102, .4), 0 0 0 0 rgba(37, 211, 102, 0)
+      }
+    }
+
+    .wa-float:hover {
+      transform: scale(1.1) rotate(6deg)
+    }
+
+    .wa-float svg {
+      width: 30px;
+      height: 30px;
+      color: #fff
+    }
+
+    .to-top {
+      position: fixed;
+      bottom: 100px;
+      right: 33px;
+      z-index: 900;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      background: var(--ink);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(14px);
+      transition: .4s var(--ease);
+      box-shadow: 0 10px 24px rgba(13, 27, 42, .3);
+    }
+
+    .to-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: none
+    }
+
+    .to-top:hover {
+      background: var(--ink-3)
+    }
+
+    .to-top svg {
+      width: 18px;
+      height: 18px
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width:1024px) {
+
+      .why-grid,
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .step::after {
+        display: none
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin: 0 auto
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr
+      }
+
+      .hero-card {
+        max-width: 460px
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media (max-width:820px) {
+      section {
+        padding: 80px 0
+      }
+
+      .insc-box {
+        grid-template-columns: 1fr;
+        padding: 50px 32px
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+
+      .map-wrap {
+        min-height: 360px
+      }
+
+      .temoin-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin: 0 auto
+      }
+    }
+
+    @media (max-width:560px) {
+
+      .why-grid,
+      .steps-grid {
+        grid-template-columns: 1fr
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 22px
+      }
+
+      .stat+.stat {
+        padding-left: 0;
+        border-left: none
+      }
+
+      .stat {
+        padding-right: 0
+      }
+
+      .hero-actions .btn {
+        width: 100%
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px
+      }
+
+      .hero {
+        background-attachment: scroll
+      }
+
+      .scroll-hint {
+        display: none
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <header id="header">
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <div class="logo-img-placeholder">B</div>
-                <div class="logo-text">
-                    <h1>LE BERRAH</h1>
-                    <span>Auto-école d'Élite</span>
-                </div>
-            </a>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <nav>
-                <ul id="navMenu">
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#services">Formations</a></li>
-                    <li><a href="#inscription">Inscription</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <div id="progress"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="#accueil" class="logo">
+        <div class="logo-mark">B</div>
+        <div class="logo-name">LE BERRAH<small>Auto-école</small></div>
+      </a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span></button>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#accueil" class="active">Accueil</a></li>
+          <li><a href="#formations">Formations</a></li>
+          <li><a href="#etapes">Parcours</a></li>
+          <li><a href="#temoignages">Avis</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#inscription" class="nav-cta">S'inscrire</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="accueil">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge"><span class="dot"></span> Inscriptions ouvertes — places limitées</div>
+        <h1>Prenez la route avec <span class="gold">confiance</span> et expertise.</h1>
+        <p class="lead">L'auto-école de référence à Niamana, Bamako. Une pédagogie moderne, des moniteurs passionnés et
+          un accompagnement complet jusqu'à l'obtention de votre permis.</p>
+        <div class="hero-actions">
+          <a href="#inscription" class="btn btn-gold">
+            Commencer maintenant
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#formations" class="btn btn-ghost">Découvrir nos formations</a>
         </div>
-    </header>
-
-    <section class="hero" id="accueil">
-        <div class="container">
-            <div class="hero-content">
-                <h2 data-aos="fade-right">Maîtrisez la route avec expertise.</h2>
-                <p data-aos="fade-right" data-aos-delay="200">Rejoignez l'auto-école la plus moderne de Niamana. Une pédagogie innovante pour une réussite garantie à votre examen de conduite.</p>
-                <div class="btn-group">
-                    <a href="#inscription" class="cta-button">Commencer maintenant</a>
-                    <a href="#services" class="cta-button cta-secondary">Nos tarifs</a>
-                </div>
-            </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="num"><span data-count="1500">0</span><em>+</em></div>
+            <div class="lbl">Élèves formés</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-count="95">0</span><em>%</em></div>
+            <div class="lbl">Taux de réussite</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-count="10">0</span><em>+</em></div>
+            <div class="lbl">Ans d'expérience</div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section id="services">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <span>Programmes d'Excellence</span>
-                <h2>Nos Formations</h2>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-car-side service-icon"></i>
-                    <h3>Permis Poids Léger</h3>
-                    <p>La formation idéale pour les futurs conducteurs de véhicules de tourisme.</p>
-                    <div class="price-badge">80 000 F CFA</div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Code de la route illimité</li>
-                        <li><i class="fas fa-check-circle"></i> 20h de conduite pratique</li>
-                        <li><i class="fas fa-check-circle"></i> simulateur de conduite</li>
-                        <li><i class="fas fa-check-circle"></i> Accompagnement examen</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-truck service-icon"></i>
-                    <h3>Permis Poids Lourds</h3>
-                    <p>Spécialisez-vous dans le transport de marchandises et de gros volumes.</p>
-                    <div class="price-badge">100 000 F CFA</div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Mécanique poids lourds</li>
-                        <li><i class="fas fa-check-circle"></i> Règlementation sociale</li>
-                        <li><i class="fas fa-check-circle"></i> Pratique sur véhicule pro</li>
-                        <li><i class="fas fa-check-circle"></i> Insertion professionnelle</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-id-card-alt service-icon"></i>
-                    <h3>Service Administratif</h3>
-                    <p>Nous gérons toute la paperasse complexe pour vous simplifier la vie.</p>
-                    <div class="price-badge">Rapide & Fiable</div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Renouvellement de permis</li>
-                        <li><i class="fas fa-check-circle"></i> Conversion de permis</li>
-                        <li><i class="fas fa-check-circle"></i> Duplicata en cas de perte</li>
-                        <li><i class="fas fa-check-circle"></i> Conseil personnalisé</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="hero-card reveal" data-delay="2">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.3l-4.8 2.6.9-5.4L4.2 7.7l5.4-.8z" />
+          </svg>
+          Pourquoi Le Berrah ?
+        </h3>
+        <div class="hc-row">
+          <div class="hc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg></div>
+          <div><b>Code de la route illimité</b><span>Salle climatisée & supports numériques</span></div>
         </div>
-    </section>
-
-    <section id="inscription">
-        <div class="container">
-            <div class="inscription-box" data-aos="zoom-in">
-                <div class="inscription-text">
-                    <h2>Prêt à passer à l'action ?</h2>
-                    <p style="margin: 20px 0 40px; font-size: 1.1rem; opacity: 0.9;">L'inscription est rapide et simple. Apportez vos documents et commencez vos cours dès le lendemain.</p>
-                    
-                    <div class="doc-card">
-                        <i class="fas fa-file-invoice"></i>
-                        <div>
-                            <h4>Acte de Naissance</h4>
-                            <p>Une copie originale ou légalisée.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="doc-card">
-                        <i class="fas fa-user-circle"></i>
-                        <div>
-                            <h4>Photos d'Identité</h4>
-                            <p>3 photos récentes format passeport.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="inscription-image" style="text-align: center;">
-                    <i class="fas fa-user-plus" style="font-size: 10rem; opacity: 0.2; position: absolute; transform: translate(-50%, -50%);"></i>
-                    <div style="position: relative; z-index: 1;">
-                        <h3 style="font-size: 2rem; margin-bottom: 20px;">Tarifs Inscription</h3>
-                        <p style="font-size: 3rem; font-weight: 800; color: var(--secondary);">Dès 80 000 F</p>
-                        <a href="https://wa.me/22371817414" class="cta-button" style="margin-top: 30px; width: 100%; text-align: center;">S'inscrire via WhatsApp</a>
-                    </div>
-                </div>
-            </div>
+        <div class="hc-row">
+          <div class="hc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg></div>
+          <div><b>Horaires flexibles</b><span>Cours adaptés à votre emploi du temps</span></div>
         </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <span>Nous trouver</span>
-                <h2>Contact & Accès</h2>
-            </div>
-            
-            <div class="contact-grid">
-                <div class="contact-info-panel" data-aos="fade-right">
-                    <h3>Contactez-nous</h3>
-                    <p style="color: #aaa; margin-bottom: 40px;">Une question ? Notre équipe vous répond en moins de 24h.</p>
-                    
-                    <div class="contact-item">
-                        <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
-                        <div>
-                            <h4>Localisation</h4>
-                            <p>Niamana, Route de Ségou, Bamako Mali</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
-                        <div>
-                            <h4>Appelez-nous</h4>
-                            <p>(+223) 71 81 74 14</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="icon-box"><i class="fas fa-envelope"></i></div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>contact@leberrah.ml</p>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/22371817414"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                
-                <div class="map-container" data-aos="fade-left">
-                    <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.4357283403254!2d-7.917178685181702!3d12.618037391088523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDM3JzA0LjkiTiA3wrA1NCc1My45Ilc!5e0!3m2!1sfr!2sml!4v1625562718142!5m2!1sfr!2sml" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
+        <div class="hc-row">
+          <div class="hc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg></div>
+          <div><b>Accompagnement examen</b><span>Nous vous suivons jusqu'à la réussite</span></div>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-logo">
-                    <h3>LE BERRAH<span>.</span></h3>
-                    <p>Leader de la formation à la conduite au Mali. Nous formons avec rigueur pour garantir votre sécurité et celle des autres sur la route.</p>
-                </div>
-                <div class="footer-nav">
-                    <h4 style="margin-bottom: 25px; color: var(--secondary);">Navigation</h4>
-                    <ul style="list-style: none; line-height: 2.5;">
-                        <li><a href="#accueil" style="color: #ccc; text-decoration: none;">Accueil</a></li>
-                        <li><a href="#services" style="color: #ccc; text-decoration: none;">Nos Formations</a></li>
-                        <li><a href="#inscription" style="color: #ccc; text-decoration: none;">Inscription</a></li>
-                    </ul>
-                </div>
-                <div class="footer-hours">
-                    <h4 style="margin-bottom: 25px; color: var(--secondary);">Horaires</h4>
-                    <p style="color: #ccc; font-size: 0.9rem;">Lun - Ven: 08:00 - 18:00</p>
-                    <p style="color: #ccc; font-size: 0.9rem;">Samedi: 09:00 - 16:00</p>
-                    <p style="color: #ccc; font-size: 0.9rem;">Dimanche: Fermé</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Auto-école Le Berrah. Design par Berrahtech.</p>
-            </div>
+        <div class="hc-row">
+          <div class="hc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" />
+              <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+            </svg></div>
+          <div><b>Insertion professionnelle</b><span>Filière poids lourds & débouchés métiers</span></div>
         </div>
-    </footer>
+      </div>
+    </div>
+    <div class="scroll-hint"></div>
+  </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialisation des animations
-        AOS.init({
-            duration: 1000,
-            once: true
+  <!-- ================= MARQUEE ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Permis Poids Léger</span><span>Permis Poids Lourd</span><span>Code de la route</span><span>Services administratifs</span><span>Moniteurs certifiés</span>
+      <span>Permis Poids Léger</span><span>Permis Poids Lourd</span><span>Code de la route</span><span>Services administratifs</span><span>Moniteurs certifiés</span>
+    </div>
+  </div>
+
+  <!-- ================= POURQUOI NOUS ================= -->
+  <section class="why" id="pourquoi">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="eyebrow">Nos atouts</div>
+        <h2>Une formation pensée pour votre réussite</h2>
+        <p>Tout ce dont vous avez besoin pour devenir un conducteur sûr, confiant et responsable.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal" data-delay="1">
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+            </svg></div>
+          <h3>Moniteurs expérimentés</h3>
+          <p>Une équipe pédagogue et patiente, formée aux dernières méthodes d'enseignement de la conduite.</p>
+        </div>
+        <div class="why-card reveal" data-delay="2">
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
+            </svg></div>
+          <h3>Salle de cours moderne</h3>
+          <p>Une salle climatisée équipée de supports numériques pour apprendre le code dans les meilleures conditions.</p>
+        </div>
+        <div class="why-card reveal" data-delay="3">
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M14 16H9m10 0h3v-3.15a1 1 0 00-.84-.99L16 11l-2.7-3.6a1 1 0 00-.8-.4H5.24a2 2 0 00-1.8 1.1l-.9 1.8a2 2 0 00-.21.9V16h3" />
+              <circle cx="6.5" cy="16.5" r="2.5" />
+              <circle cx="16.5" cy="16.5" r="2.5" />
+            </svg></div>
+          <h3>Véhicules entretenus</h3>
+          <p>Un parc de véhicules récents et régulièrement contrôlés, pour apprendre dans les meilleures conditions.</p>
+        </div>
+        <div class="why-card reveal" data-delay="4">
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+              <path d="M22 4L12 14.01l-3-3" />
+            </svg></div>
+          <h3>Suivi personnalisé</h3>
+          <p>Chaque élève avance à son rythme avec un plan de formation adapté à son niveau et à ses objectifs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FORMATIONS ================= -->
+  <section class="formations" id="formations">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="eyebrow">Nos programmes</div>
+        <h2>Des formations d'excellence</h2>
+        <p>Des tarifs transparents, sans frais cachés. Choisissez la formation qui correspond à votre projet.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal" data-delay="1">
+          <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M14 16H9m10 0h3v-3.15a1 1 0 00-.84-.99L16 11l-2.7-3.6a1 1 0 00-.8-.4H5.24a2 2 0 00-1.8 1.1l-.9 1.8a2 2 0 00-.21.9V16h3" />
+              <circle cx="6.5" cy="16.5" r="2.5" />
+              <circle cx="16.5" cy="16.5" r="2.5" />
+            </svg></div>
+          <h3>Permis Poids Léger</h3>
+          <p>La formation complète pour conduire un véhicule de tourisme en toute sérénité.</p>
+          <div class="price">80 000 <small>F CFA</small></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>Code de la route illimité</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>20h de conduite pratique</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>Horaires de conduite flexibles</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>Accompagnement à l'examen</li>
+          </ul>
+          <a href="https://wa.me/22371817414?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20au%20permis%20poids%20l%C3%A9ger."
+            class="btn btn-dark" target="_blank" rel="noopener">Choisir cette formation</a>
+        </div>
+
+        <div class="card featured reveal" data-delay="2">
+          <div class="tag">Populaire</div>
+          <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 17h4V5H2v12h3" />
+              <path d="M20 17h2v-3.34a4 4 0 00-1.17-2.83L19 9h-5v8h1" />
+              <circle cx="7.5" cy="17.5" r="2.5" />
+              <circle cx="17.5" cy="17.5" r="2.5" />
+            </svg></div>
+          <h3>Permis Poids Lourd</h3>
+          <p>Ouvrez-vous les portes du transport professionnel de marchandises.</p>
+          <div class="price">100 000 <small>F CFA</small></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>Mécanique poids lourd</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>Réglementation du transport</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>Pratique sur véhicule pro</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>Aide à l'insertion professionnelle</li>
+          </ul>
+          <a href="https://wa.me/22371817414?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20au%20permis%20poids%20lourd."
+            class="btn btn-gold" target="_blank" rel="noopener">Choisir cette formation</a>
+        </div>
+
+        <div class="card reveal" data-delay="3">
+          <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M7 15h3m4 0h3M7 11h.01M12 11h.01M17 11h.01" />
+              <path d="M2 8h20" />
+            </svg></div>
+          <h3>Services Administratifs</h3>
+          <p>Nous nous occupons de toutes vos démarches liées au permis de conduire.</p>
+          <div class="price" style="font-size:1.5rem;padding:6px 0">Rapide &amp; fiable</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>Renouvellement de permis</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>Conversion de permis étranger</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>Duplicata en cas de perte</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>Conseil personnalisé</li>
+          </ul>
+          <a href="https://wa.me/22371817414?text=Bonjour%2C%20j%27ai%20besoin%20d%27un%20service%20administratif%20pour%20mon%20permis."
+            class="btn btn-dark" target="_blank" rel="noopener">Demander un service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ÉTAPES ================= -->
+  <section class="steps" id="etapes">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="eyebrow">Votre parcours</div>
+        <h2>Le permis en 4 étapes simples</h2>
+        <p>Un parcours clair et structuré, de l'inscription jusqu'à l'obtention de votre permis.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step reveal" data-delay="1">
+          <span class="n"></span>
+          <h3>Inscription</h3>
+          <p>Apportez vos documents à l'agence ou contactez-nous sur WhatsApp. C'est rapide et simple.</p>
+        </div>
+        <div class="step reveal" data-delay="2">
+          <span class="n"></span>
+          <h3>Code de la route</h3>
+          <p>Cours théoriques illimités en salle avec supports modernes, jusqu'à la maîtrise complète.</p>
+        </div>
+        <div class="step reveal" data-delay="3">
+          <span class="n"></span>
+          <h3>Conduite pratique</h3>
+          <p>Prenez le volant avec un moniteur dédié et progressez à votre rythme.</p>
+        </div>
+        <div class="step reveal" data-delay="4">
+          <span class="n"></span>
+          <h3>Examen &amp; permis</h3>
+          <p>Nous vous accompagnons le jour J et gérons les démarches jusqu'à la remise du permis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INSCRIPTION ================= -->
+  <section class="inscription" id="inscription">
+    <div class="container">
+      <div class="insc-box reveal">
+        <div>
+          <h2>Prêt à passer à l'action ?</h2>
+          <p class="sub">L'inscription se fait en quelques minutes. Munissez-vous simplement de ces deux documents et
+            commencez vos cours dès le lendemain.</p>
+          <div class="doc">
+            <div class="doc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+              </svg></div>
+            <div><b>Acte de naissance</b><span>Une copie originale ou légalisée</span></div>
+          </div>
+          <div class="doc">
+            <div class="doc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="12" cy="10" r="3" />
+                <path d="M6.5 20a5.5 5.5 0 0111 0" />
+              </svg></div>
+            <div><b>3 photos d'identité</b><span>Format passeport, récentes</span></div>
+          </div>
+        </div>
+        <div class="insc-cta">
+          <div class="from">Inscription dès</div>
+          <div class="big">80 000</div>
+          <div class="cur">Francs CFA</div>
+          <a href="https://wa.me/22371817414?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20l%27auto-%C3%A9cole%20Le%20Berrah."
+            class="btn btn-gold" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.5 14.4l-2.5-1.2c-.3-.1-.6-.1-.8.2l-1.1 1.3c-1.8-.9-3.2-2.3-4.1-4.1L10.3 9.5c.2-.2.3-.5.2-.8L9.2 6.2C9.1 5.8 8.7 5.6 8.3 5.7c-1.1.3-2.1 1.2-2.1 2.5 0 4.5 5.1 9.6 9.6 9.6 1.2 0 2.2-1 2.5-2.1.1-.4-.1-.8-.5-.9zM12 1C5.9 1 1 5.9 1 12c0 2 .5 3.8 1.4 5.5L1 23l5.7-1.4C8.3 22.5 10.1 23 12 23c6.1 0 11-4.9 11-11S18.1 1 12 1zm0 20c-1.8 0-3.4-.5-4.9-1.3l-.4-.2-3.4.9.9-3.3-.2-.4C3.1 15.2 2.6 13.6 2.6 12 2.6 6.8 6.8 2.6 12 2.6S21.4 6.8 21.4 12 17.2 21 12 21z" />
+            </svg>
+            S'inscrire via WhatsApp
+          </a>
+          <p class="insc-note">Réponse en moins de 24h — 7j/7</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TÉMOIGNAGES ================= -->
+  <section class="temoignages" id="temoignages">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="eyebrow">Ils nous font confiance</div>
+        <h2>Ce que disent nos élèves</h2>
+        <p>La satisfaction de nos élèves est notre plus belle récompense.</p>
+      </div>
+      <div class="temoin-grid">
+        <div class="temoin reveal" data-delay="1">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg>
+          </div>
+          <p>« J'ai obtenu mon permis du premier coup grâce aux moniteurs du Berrah. Ils sont patients, à l'écoute et
+            vraiment professionnels. Je recommande à 100 % ! »</p>
+          <div class="temoin-who">
+            <div class="avatar" style="background:linear-gradient(135deg,#1f6fb2,#3a8fd4)">AK</div>
+            <div><b>Aminata Koné</b><span>Permis poids léger</span></div>
+          </div>
+        </div>
+        <div class="temoin reveal" data-delay="2">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg>
+          </div>
+          <p>« La formation poids lourd m'a permis de trouver un emploi de chauffeur en moins de deux mois. Merci à
+            toute l'équipe pour l'accompagnement professionnel. »</p>
+          <div class="temoin-who">
+            <div class="avatar" style="background:linear-gradient(135deg,#e09600,#f5b301)">MD</div>
+            <div><b>Moussa Diarra</b><span>Permis poids lourd</span></div>
+          </div>
+        </div>
+        <div class="temoin reveal" data-delay="3">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z" />
+            </svg>
+          </div>
+          <p>« Pour le renouvellement de mon permis, tout a été géré en un temps record. Un service administratif
+            sérieux et efficace, sans stress ni file d'attente. »</p>
+          <div class="temoin-who">
+            <div class="avatar" style="background:linear-gradient(135deg,#1b3a5b,#2c5a8a)">FS</div>
+            <div><b>Fatoumata Sangaré</b><span>Service administratif</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="eyebrow">Questions fréquentes</div>
+        <h2>Vous avez des questions ?</h2>
+        <p>Voici les réponses aux questions que l'on nous pose le plus souvent.</p>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q">Quel âge faut-il avoir pour s'inscrire ?
+            <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg></span>
+          </button>
+          <div class="faq-a">
+            <p>Vous pouvez vous inscrire dès 18 ans pour le permis poids léger. Pour le permis poids lourd, il faut être
+              titulaire du permis poids léger et avoir au moins 21 ans.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Combien de temps dure la formation ?
+            <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg></span>
+          </button>
+          <div class="faq-a">
+            <p>En moyenne, la formation complète dure entre 1 et 3 mois selon votre disponibilité et votre rythme
+              d'apprentissage. Le code de la route est illimité, vous progressez donc sans pression.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Puis-je payer en plusieurs fois ?
+            <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg></span>
+          </button>
+          <div class="faq-a">
+            <p>Oui, des facilités de paiement sont possibles. Contactez-nous sur WhatsApp ou passez à l'agence pour
+              convenir d'un échéancier adapté à votre situation.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Que se passe-t-il si j'échoue à l'examen ?
+            <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg></span>
+          </button>
+          <div class="faq-a">
+            <p>Pas de panique : nous vous accompagnons jusqu'à la réussite. Vous continuez à vous entraîner avec nos
+              moniteurs et repassez l'examen dans les meilleures conditions.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Gérez-vous la conversion des permis étrangers ?
+            <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg></span>
+          </button>
+          <div class="faq-a">
+            <p>Oui, notre service administratif s'occupe de la conversion de votre permis étranger, du renouvellement et
+              des duplicatas en cas de perte, rapidement et en toute fiabilité.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="eyebrow">Nous trouver</div>
+        <h2>Contact &amp; accès</h2>
+        <p>Notre équipe vous répond en moins de 24h. Passez nous voir à l'agence, on vous accueille avec le sourire.</p>
+      </div>
+      <div class="contact-grid reveal">
+        <div class="contact-panel">
+          <h3>Contactez-nous</h3>
+          <p class="sub">Une question sur nos formations ou nos tarifs ? Nous sommes là pour vous.</p>
+          <div class="c-item">
+            <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg></div>
+            <div><b>Localisation</b>
+              <p>Niamana, Route de Ségou<br>Bamako, Mali</p>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z" />
+              </svg></div>
+            <div><b>Téléphone</b>
+              <p><a href="tel:+22371817414">(+223) 71 81 74 14</a></p>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <path d="M22 6l-10 7L2 6" />
+              </svg></div>
+            <div><b>Email</b>
+              <p><a href="mailto:contact@leberrah.ml">contact@leberrah.ml</a></p>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg></div>
+            <div><b>Horaires</b>
+              <p>Lun – Ven : 08h00 – 18h00<br>Samedi : 09h00 – 16h00</p>
+            </div>
+          </div>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none" />
+              </svg></a>
+            <a href="https://wa.me/22371817414" target="_blank" rel="noopener" aria-label="WhatsApp"><svg
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.5 14.4l-2.5-1.2c-.3-.1-.6-.1-.8.2l-1.1 1.3c-1.8-.9-3.2-2.3-4.1-4.1L10.3 9.5c.2-.2.3-.5.2-.8L9.2 6.2C9.1 5.8 8.7 5.6 8.3 5.7c-1.1.3-2.1 1.2-2.1 2.5 0 4.5 5.1 9.6 9.6 9.6 1.2 0 2.2-1 2.5-2.1.1-.4-.1-.8-.5-.9zM12 1C5.9 1 1 5.9 1 12c0 2 .5 3.8 1.4 5.5L1 23l5.7-1.4C8.3 22.5 10.1 23 12 23c6.1 0 11-4.9 11-11S18.1 1 12 1zm0 20c-1.8 0-3.4-.5-4.9-1.3l-.4-.2-3.4.9.9-3.3-.2-.4C3.1 15.2 2.6 13.6 2.6 12 2.6 6.8 6.8 2.6 12 2.6S21.4 6.8 21.4 12 17.2 21 12 21z" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.4357283403254!2d-7.917178685181702!3d12.618037391088523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDM3JzA0LjkiTiA3wrA1NCc1My45Ilc!5e0!3m2!1sfr!2sml!4v1625562718142!5m2!1sfr!2sml"
+            allowfullscreen loading="lazy" title="Localisation Auto-école Le Berrah"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#accueil" class="logo">
+            <div class="logo-mark">B</div>
+            <div class="logo-name" style="color:#fff">LE BERRAH<small>Auto-école</small></div>
+          </a>
+          <p>Référence de la formation à la conduite au Mali. Nous formons avec rigueur pour garantir votre sécurité et
+            celle des autres sur la route.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#formations">Nos formations</a></li>
+            <li><a href="#etapes">Votre parcours</a></li>
+            <li><a href="#inscription">Inscription</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Formations</h4>
+          <ul>
+            <li><a href="#formations">Permis poids léger</a></li>
+            <li><a href="#formations">Permis poids lourd</a></li>
+            <li><a href="#formations">Code de la route</a></li>
+            <li><a href="#formations">Services administratifs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Horaires</h4>
+          <div class="hours-row"><span>Lun – Ven</span><b>08h00 – 18h00</b></div>
+          <div class="hours-row"><span>Samedi</span><b>09h00 – 16h00</b></div>
+          <div class="hours-row"><span>Dimanche</span><b class="closed">Fermé</b></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Auto-école Le Berrah. Tous droits réservés.</p>
+        <p>Conçu avec <span class="heart">♥</span> par Berrahtech</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING ================= -->
+  <a class="wa-float" href="https://wa.me/22371817414" target="_blank" rel="noopener"
+    aria-label="Discuter sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.5 14.4l-2.5-1.2c-.3-.1-.6-.1-.8.2l-1.1 1.3c-1.8-.9-3.2-2.3-4.1-4.1L10.3 9.5c.2-.2.3-.5.2-.8L9.2 6.2C9.1 5.8 8.7 5.6 8.3 5.7c-1.1.3-2.1 1.2-2.1 2.5 0 4.5 5.1 9.6 9.6 9.6 1.2 0 2.2-1 2.5-2.1.1-.4-.1-.8-.5-.9zM12 1C5.9 1 1 5.9 1 12c0 2 .5 3.8 1.4 5.5L1 23l5.7-1.4C8.3 22.5 10.1 23 12 23c6.1 0 11-4.9 11-11S18.1 1 12 1zm0 20c-1.8 0-3.4-.5-4.9-1.3l-.4-.2-3.4.9.9-3.3-.2-.4C3.1 15.2 2.6 13.6 2.6 12 2.6 6.8 6.8 2.6 12 2.6S21.4 6.8 21.4 12 17.2 21 12 21z" />
+    </svg>
+  </a>
+  <button class="to-top" id="toTop" aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script>
+    // ===== Header scroll + progress bar + back-to-top =====
+    const header = document.getElementById('header');
+    const progress = document.getElementById('progress');
+    const toTop = document.getElementById('toTop');
+
+    function onScroll() {
+      const y = window.scrollY;
+      header.classList.toggle('scrolled', y > 40);
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+      toTop.classList.toggle('show', y > 600);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ===== Mobile menu =====
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+    burger.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      document.body.classList.toggle('nav-open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      burger.classList.remove('open');
+      document.body.classList.remove('nav-open');
+      document.body.style.overflow = '';
+    }));
+
+    // ===== Reveal on scroll =====
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+// Filet de sécurité : si l'observer ne se déclenche pas, on affiche quand même
+setTimeout(() => {
+  document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => {
+    if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('is-visible');
+  });
+}, 1500);
+
+    // ===== Animated counters =====
+    function animateCount(el) {
+      const target = +el.dataset.count;
+      const dur = 1800;
+      const start = performance.now();
+      function tick(now) {
+        const p = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased).toLocaleString('fr-FR');
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+    const countObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animateCount(e.target);
+          countObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: .5 });
+    document.querySelectorAll('[data-count]').forEach(el => countObserver.observe(el));
+
+    // ===== FAQ accordion =====
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const q = item.querySelector('.faq-q');
+      const a = item.querySelector('.faq-a');
+      q.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(o => {
+          o.classList.remove('open');
+          o.querySelector('.faq-a').style.maxHeight = null;
         });
+        if (!isOpen) {
+          item.classList.add('open');
+          a.style.maxHeight = a.scrollHeight + 'px';
+        }
+      });
+    });
 
-        // Effet scroll sur le header
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+    // ===== Active nav link on scroll =====
+    const sections = document.querySelectorAll('section[id]');
+    const navA = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navA.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => sectionObserver.observe(s));
 
-        // Menu mobile toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
-            mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
-        });
-
-        // Fermeture automatique du menu mobile
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
-                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
-            });
-        });
-    </script>
+    // ===== Année dynamique =====
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
+
 </html>
