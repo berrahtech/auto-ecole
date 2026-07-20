@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-école Le Berrah | Excellence & Réussite</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0f4c75;
+            --primary-light: #3282b8;
+            --secondary: #f39c12; /* Or plus élégant */
+            --accent: #e63946;
+            --dark: #1b262c;
+            --light: #f9f9f9;
+            --white: #ffffff;
+            --shadow-sm: 0 5px 15px rgba(0,0,0,0.05);
+            --shadow-lg: 0 15px 35px rgba(0,0,0,0.1);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .logo-text h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        /* --- NAVIGATION --- */
+        header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        header.scrolled {
+            padding: 5px 0;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-img-placeholder {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .logo-text h1 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            border-radius: 5px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(15, 76, 117, 0.7), rgba(27, 38, 44, 0.85)), 
+                        url('https://images.unsplash.com/photo-1449960232330-79ba99d70d91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: left;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s forwards;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            animation: fadeInUp 1s ease 0.4s forwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
+            border: 2px solid var(--secondary);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid white;
+            box-shadow: none;
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            padding: 120px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title span {
+            color: var(--secondary);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-top: 10px;
+        }
+
+        /* --- SERVICES CARDS --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 50px 40px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.03);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: var(--transition);
+            transform-origin: left;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-light);
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .price-badge {
+            background: rgba(48, 131, 184, 0.1);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.3rem;
+            margin: 20px 0;
+            display: inline-block;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .service-card li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #555;
+        }
+
+        .service-card li i {
+            color: #2ecc71;
+            font-size: 0.9rem;
+        }
+
+        /* --- INSCRIPTION SECTION (GLASSMORPHISM) --- */
+        .inscription-box {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 30px;
+            padding: 60px;
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            box-shadow: 0 20px 40px rgba(15, 76, 117, 0.3);
+        }
+
+        .doc-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: var(--transition);
+        }
+
+        .doc-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(10px);
+        }
+
+        .doc-card i {
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-info-panel {
+            background: var(--dark);
+            color: white;
+            padding: 50px;
+            border-radius: 25px;
+        }
+
+        .contact-item {
+            margin-bottom: 35px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-item .icon-box {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+
+        .map-iframe {
+            border-radius: 25px;
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 100px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 80px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 992px) {
+            .hero h2 { font-size: 3rem; }
+            .inscription-box, .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                position: fixed;
+                top: 0; right: -100%;
+                width: 80%; height: 100vh;
+                background: white;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+            }
+            nav ul.active { right: 0; }
+            .mobile-menu-btn { display: block; }
+            .hero h2 { font-size: 2.5rem; }
+            .btn-group { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-img-placeholder">B</div>
+                <div class="logo-text">
+                    <h1>LE BERRAH</h1>
+                    <span>Auto-école d'Élite</span>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#services">Formations</a></li>
+                    <li><a href="#inscription">Inscription</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="accueil">
+        <div class="container">
+            <div class="hero-content">
+                <h2 data-aos="fade-right">Maîtrisez la route avec expertise.</h2>
+                <p data-aos="fade-right" data-aos-delay="200">Rejoignez l'auto-école la plus moderne de Niamana. Une pédagogie innovante pour une réussite garantie à votre examen de conduite.</p>
+                <div class="btn-group">
+                    <a href="#inscription" class="cta-button">Commencer maintenant</a>
+                    <a href="#services" class="cta-button cta-secondary">Nos tarifs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <span>Programmes d'Excellence</span>
+                <h2>Nos Formations</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-car-side service-icon"></i>
+                    <h3>Permis Poids Léger</h3>
+                    <p>La formation idéale pour les futurs conducteurs de véhicules de tourisme.</p>
+                    <div class="price-badge">80 000 F CFA</div>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Code de la route illimité</li>
+                        <li><i class="fas fa-check-circle"></i> 20h de conduite pratique</li>
+                        <li><i class="fas fa-check-circle"></i> simulateur de conduite</li>
+                        <li><i class="fas fa-check-circle"></i> Accompagnement examen</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-truck service-icon"></i>
+                    <h3>Permis Poids Lourds</h3>
+                    <p>Spécialisez-vous dans le transport de marchandises et de gros volumes.</p>
+                    <div class="price-badge">100 000 F CFA</div>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Mécanique poids lourds</li>
+                        <li><i class="fas fa-check-circle"></i> Règlementation sociale</li>
+                        <li><i class="fas fa-check-circle"></i> Pratique sur véhicule pro</li>
+                        <li><i class="fas fa-check-circle"></i> Insertion professionnelle</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-id-card-alt service-icon"></i>
+                    <h3>Service Administratif</h3>
+                    <p>Nous gérons toute la paperasse complexe pour vous simplifier la vie.</p>
+                    <div class="price-badge">Rapide & Fiable</div>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Renouvellement de permis</li>
+                        <li><i class="fas fa-check-circle"></i> Conversion de permis</li>
+                        <li><i class="fas fa-check-circle"></i> Duplicata en cas de perte</li>
+                        <li><i class="fas fa-check-circle"></i> Conseil personnalisé</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="inscription">
+        <div class="container">
+            <div class="inscription-box" data-aos="zoom-in">
+                <div class="inscription-text">
+                    <h2>Prêt à passer à l'action ?</h2>
+                    <p style="margin: 20px 0 40px; font-size: 1.1rem; opacity: 0.9;">L'inscription est rapide et simple. Apportez vos documents et commencez vos cours dès le lendemain.</p>
+                    
+                    <div class="doc-card">
+                        <i class="fas fa-file-invoice"></i>
+                        <div>
+                            <h4>Acte de Naissance</h4>
+                            <p>Une copie originale ou légalisée.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="doc-card">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Photos d'Identité</h4>
+                            <p>3 photos récentes format passeport.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="inscription-image" style="text-align: center;">
+                    <i class="fas fa-user-plus" style="font-size: 10rem; opacity: 0.2; position: absolute; transform: translate(-50%, -50%);"></i>
+                    <div style="position: relative; z-index: 1;">
+                        <h3 style="font-size: 2rem; margin-bottom: 20px;">Tarifs Inscription</h3>
+                        <p style="font-size: 3rem; font-weight: 800; color: var(--secondary);">Dès 80 000 F</p>
+                        <a href="https://wa.me/22371817414" class="cta-button" style="margin-top: 30px; width: 100%; text-align: center;">S'inscrire via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <span>Nous trouver</span>
+                <h2>Contact & Accès</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info-panel" data-aos="fade-right">
+                    <h3>Contactez-nous</h3>
+                    <p style="color: #aaa; margin-bottom: 40px;">Une question ? Notre équipe vous répond en moins de 24h.</p>
+                    
+                    <div class="contact-item">
+                        <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Localisation</h4>
+                            <p>Niamana, Route de Ségou, Bamako Mali</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>Appelez-nous</h4>
+                            <p>(+223) 71 81 74 14</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@leberrah.ml</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/22371817414"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="map-container" data-aos="fade-left">
+                    <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.4357283403254!2d-7.917178685181702!3d12.618037391088523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDM3JzA0LjkiTiA3wrA1NCc1My45Ilc!5e0!3m2!1sfr!2sml!4v1625562718142!5m2!1sfr!2sml" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <h3>LE BERRAH<span>.</span></h3>
+                    <p>Leader de la formation à la conduite au Mali. Nous formons avec rigueur pour garantir votre sécurité et celle des autres sur la route.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 style="margin-bottom: 25px; color: var(--secondary);">Navigation</h4>
+                    <ul style="list-style: none; line-height: 2.5;">
+                        <li><a href="#accueil" style="color: #ccc; text-decoration: none;">Accueil</a></li>
+                        <li><a href="#services" style="color: #ccc; text-decoration: none;">Nos Formations</a></li>
+                        <li><a href="#inscription" style="color: #ccc; text-decoration: none;">Inscription</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4 style="margin-bottom: 25px; color: var(--secondary);">Horaires</h4>
+                    <p style="color: #ccc; font-size: 0.9rem;">Lun - Ven: 08:00 - 18:00</p>
+                    <p style="color: #ccc; font-size: 0.9rem;">Samedi: 09:00 - 16:00</p>
+                    <p style="color: #ccc; font-size: 0.9rem;">Dimanche: Fermé</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Auto-école Le Berrah. Design par Berrahtech.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialisation des animations
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Effet scroll sur le header
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Menu mobile toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
+            mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Fermeture automatique du menu mobile
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
+</body>
+</html>
