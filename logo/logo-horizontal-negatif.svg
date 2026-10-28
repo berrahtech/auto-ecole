@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 132" width="640" height="264">
+  <title>Le Berrah — Logo principal (fond sombre)</title>
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,700;1,800&amp;display=swap');
+      .w{font-family:'Plus Jakarta Sans','Montserrat',Arial,sans-serif}</style>
+    <linearGradient id="gGoldH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d98a00"/>
+      <stop offset=".5" stop-color="#ffcf3a"/>
+      <stop offset="1" stop-color="#f5b301"/>
+    </linearGradient>
+  </defs>
+  <text class="w" x="4" y="58" font-size="52" font-weight="800" font-style="italic" letter-spacing="-1.5" fill="#ffffff">LE BERRAH</text>
+  <path d="M0 108 C 110 107, 220 96, 318 64 L316 63.8 C 218 89, 108 93, 0 91 Z" fill="url(#gGoldH)"/>
+  <path d="M0 99.5 C 110 99, 219 92.5, 317 63.9" fill="none" stroke="#0d1b2a" stroke-width="1.5" stroke-dasharray="10 7"/>
+  <text class="w" x="5" y="127" font-size="11.5" font-weight="700" letter-spacing="6.5" fill="#f5b301">AUTO-ÉCOLE · BAMAKO</text>
+</svg>

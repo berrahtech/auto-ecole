@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charte graphique — Le Berrah</title>
+<link rel="icon" href="logo-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,700;0,800;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0d1b2a;--ink-2:#14273d;--ink-3:#1b3a5b;
+    --gold:#f5b301;--gold-deep:#e09600;--gold-light:#ffcf3a;
+    --paper:#f6f4ef;--line:#e4e0d6;--muted:#5b6878;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:-.02em;line-height:1.15}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  section{padding:80px 0;border-top:1px solid var(--line)}
+  .eyebrow{display:inline-block;font:700 .72rem 'Plus Jakarta Sans';letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:12px}
+  h2{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:14px}
+  .lead{color:var(--muted);max-width:640px;margin-bottom:40px}
+  svg.wm{display:block;width:100%;height:auto;overflow:visible}
+
+  /* Hero */
+  .hero{background:radial-gradient(ellipse at 80% 0%,#1f4570 0%,var(--ink) 60%);color:#fff;padding:90px 0 100px;border:0}
+  .hero .eyebrow{color:var(--gold)}
+  .hero h1{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:16px}
+  .hero p{color:#b8c4d3;max-width:560px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+  .hero-logo{max-width:460px;color:#fff;--dash:var(--ink);--tag:var(--gold)}
+
+  /* Story */
+  .story{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px}
+  .card h3{font-size:1.1rem;margin:14px 0 6px}
+  .card p{color:var(--muted);font-size:.94rem}
+  .num{width:40px;height:40px;border-radius:12px;background:var(--ink);color:var(--gold);display:grid;place-items:center;font:800 1rem 'Plus Jakarta Sans'}
+
+  /* Versions */
+  .versions{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .panel{border-radius:20px;padding:44px 40px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;border:1px solid var(--line)}
+  .panel .art{max-width:330px;width:100%;margin:auto}
+  .panel .cap{font-size:.82rem;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .panel .cap b{color:inherit;font-family:'Plus Jakarta Sans'}
+  .p-light{background:#fff;color:var(--ink);--dash:var(--ink);--tag:var(--gold-deep)}
+  .p-dark{background:var(--ink);color:#fff;border-color:var(--ink);--dash:var(--ink);--tag:var(--gold)}
+  .p-dark .cap{color:#8fa0b4}
+  .p-mono{background:#fff;color:#000;--dash:#fff;--tag:#000;--road:#000}
+  .p-gold{background:var(--gold);color:var(--ink);border-color:var(--gold);--dash:var(--gold);--tag:var(--ink);--road:var(--ink)}
+  .p-gold .cap{color:#5a4300}
+  .icons{display:flex;align-items:flex-end;gap:28px;flex-wrap:wrap;justify-content:center;margin:auto}
+  .icons svg{display:block}
+  .icons figure{text-align:center;font-size:.75rem;color:var(--muted)}
+  .icons figcaption{margin-top:8px}
+
+  /* Construction */
+  .build{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+  .build-box{background:#fff;border:1px solid var(--line);border-radius:20px;padding:40px;color:var(--ink);--dash:var(--ink);--tag:var(--gold-deep)}
+  .rules li{list-style:none;padding:14px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .rules li b{font-family:'Plus Jakarta Sans';display:block}
+  .rules li span{color:var(--muted)}
+
+  /* Colours */
+  .colors{display:grid;grid-template-columns:2fr 2fr 1fr 1fr;gap:16px}
+  .sw{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#fff}
+  .sw .chip{height:150px;padding:18px;display:flex;align-items:flex-end;font:800 1.05rem 'Plus Jakarta Sans'}
+  .sw .meta{padding:16px 18px;font-size:.8rem;color:var(--muted);line-height:1.8}
+  .sw .meta b{color:var(--ink);font-family:'Plus Jakarta Sans'}
+  .gradbar{margin-top:16px;height:64px;border-radius:16px;background:linear-gradient(90deg,#d98a00,#ffcf3a 50%,#f5b301);display:flex;align-items:center;padding:0 22px;font:700 .85rem 'Plus Jakarta Sans';color:var(--ink)}
+
+  /* Type */
+  .type{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .type .card .big{font-family:'Plus Jakarta Sans';font-size:clamp(2.2rem,5vw,3.4rem);line-height:1;margin:10px 0 18px}
+  .type .alpha{font-size:1.05rem;letter-spacing:.04em;word-break:break-all}
+
+  /* Don'ts */
+  .donts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .dont{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 20px 18px;--dash:var(--ink);--tag:var(--gold-deep)}
+  .dont .art{height:80px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .dont .art svg{width:170px}
+  .dont p{font-size:.82rem;color:var(--muted);margin-top:14px;padding-left:26px;position:relative}
+  .dont p::before{content:"✕";position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background:#d93025;color:#fff;font-size:.65rem;display:grid;place-items:center}
+
+  /* Mockups */
+  .mocks{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+  .mock{border-radius:20px;padding:36px;display:flex;align-items:center;justify-content:center;min-height:300px}
+  .m-cards{background:linear-gradient(135deg,#e9e4d8,#d8d1c0);padding-bottom:84px}
+  .bc{width:260px;height:156px;border-radius:12px;box-shadow:0 20px 40px rgba(13,27,42,.25);padding:22px;display:flex;flex-direction:column;justify-content:space-between;flex-shrink:0}
+  .bc.front{background:var(--ink);color:#fff;--dash:var(--ink);--tag:var(--gold);justify-content:center;transform:rotate(-6deg)}
+  .bc.back{background:#fff;--dash:var(--ink);--tag:var(--gold-deep);margin-left:-30px;transform:rotate(4deg) translateY(60px);font-size:.66rem;color:var(--muted)}
+  .bc.back b{display:block;color:var(--ink);font:800 .85rem 'Plus Jakarta Sans'}
+  .bc.back .l{border-left:3px solid var(--gold);padding-left:8px;line-height:1.6}
+  .m-social{background:linear-gradient(135deg,#1f4570,var(--ink))}
+  .phone{width:230px;background:#fff;border-radius:22px;overflow:hidden;color:var(--ink);box-shadow:0 20px 40px rgba(0,0,0,.35)}
+  .phone .cover{height:70px;background:linear-gradient(90deg,#d98a00,#ffcf3a 50%,#f5b301)}
+  .phone .pf{display:flex;gap:10px;align-items:flex-end;padding:0 14px;margin-top:-28px}
+  .phone .pf svg{border:3px solid #fff;border-radius:16px;flex-shrink:0;box-sizing:content-box}
+  .phone .pf b{font:800 .85rem 'Plus Jakarta Sans';display:block}
+  .phone .pf small{font-size:.66rem;color:var(--muted)}
+  .phone .btn{margin:14px;background:var(--ink);color:#fff;border-radius:10px;text-align:center;padding:8px;font:700 .72rem 'Plus Jakarta Sans'}
+
+  /* Files */
+  .files{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .file{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+  .file:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(13,27,42,.08)}
+  .file .th{width:64px;height:48px;border-radius:10px;background:var(--paper);display:grid;place-items:center;flex-shrink:0;padding:6px;color:var(--ink);--dash:var(--ink);--tag:var(--gold-deep)}
+  .file .th.dk{background:var(--ink);color:#fff;--tag:var(--gold)}
+  .file b{font:700 .88rem 'Plus Jakarta Sans';display:block}
+  .file small{color:var(--muted);font-size:.76rem}
+
+  footer{background:var(--ink);color:#8fa0b4;padding:40px 0;font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  footer .fl{width:150px;color:#fff;--dash:var(--ink);--tag:var(--gold)}
+
+  @media (max-width:900px){
+    .hero-grid,.build,.mocks,.type{grid-template-columns:1fr}
+    .story,.files,.versions{grid-template-columns:1fr}
+    .colors{grid-template-columns:1fr 1fr}
+    .donts{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:520px){
+    section{padding:56px 0}
+    .wrap{padding:0 16px}
+    .panel{padding:32px 22px}
+    .donts{grid-template-columns:1fr}
+    .m-cards{flex-direction:column;padding:36px 16px 56px}
+    .bc.back{margin-left:0;margin-top:-20px;transform:rotate(3deg)}
+  }
+</style>
+</head>
+<body>
+
+<!-- Symboles réutilisables : la couleur du nom suit `color`, la route/les pointillés/la mention suivent --road, --dash, --tag -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gGoldH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d98a00"/><stop offset=".5" stop-color="#ffcf3a"/><stop offset="1" stop-color="#f5b301"/>
+    </linearGradient>
+    <linearGradient id="gNavy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f4570"/><stop offset="1" stop-color="#0a1622"/>
+    </linearGradient>
+    <symbol id="wm" viewBox="0 0 320 132">
+      <text x="4" y="58" font-family="Plus Jakarta Sans" font-weight="800" font-style="italic" font-size="52" letter-spacing="-1.5" fill="currentColor">LE BERRAH</text>
+      <path d="M0 108 C 110 107, 220 96, 318 64 L316 63.8 C 218 89, 108 93, 0 91 Z" style="fill:var(--road,url(#gGoldH))"/>
+      <path d="M0 99.5 C 110 99, 219 92.5, 317 63.9" fill="none" style="stroke:var(--dash,#0d1b2a)" stroke-width="1.5" stroke-dasharray="10 7"/>
+      <text x="5" y="127" font-family="Plus Jakarta Sans" font-weight="700" font-size="11.5" letter-spacing="6.5" style="fill:var(--tag,#e09600)">AUTO-ÉCOLE · BAMAKO</text>
+    </symbol>
+    <symbol id="ic" viewBox="0 0 120 120">
+      <rect width="120" height="120" rx="28" fill="url(#gNavy)"/>
+      <text x="58" y="72" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="74" font-weight="800" font-style="italic" fill="#fff">B</text>
+      <path d="M0 102 C 40 101, 80 94, 120 70 L120 68.5 C 80 88, 40 92, 0 91 Z" fill="url(#gGoldH)"/>
+      <path d="M0 96.5 C 40 96, 80 91, 120 69.3" fill="none" stroke="#0d1b2a" stroke-width="1.3" stroke-dasharray="6 4.5"/>
+    </symbol>
+    <symbol id="fav" viewBox="0 0 120 120">
+      <rect width="120" height="120" rx="28" fill="#0d1b2a"/>
+      <text x="58" y="74" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="80" font-weight="800" font-style="italic" fill="#fff">B</text>
+      <path d="M0 106 C 40 105, 80 96, 120 70 L120 66 C 80 88, 40 92, 0 91 Z" fill="#f5b301"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Charte graphique · v2.0</span>
+      <h1>La Signature Route</h1>
+      <p>Le guide d'identité visuelle de l'Auto-école Le Berrah. Il explique comment utiliser le logo, les couleurs et les polices pour que la marque reste cohérente, de l'enseigne aux réseaux sociaux.</p>
+    </div>
+    <svg class="wm hero-logo" viewBox="0 0 320 132" role="img" aria-label="Logo Le Berrah"><use href="#wm"/></svg>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">01 · L'idée</span>
+    <h2>Un nom qui prend la route</h2>
+    <p class="lead">Le logo est une signature : le nom de l'auto-école, écrit en italique dynamique, est souligné par une route dorée qui file vers l'horizon. Il raconte en un coup d'œil le parcours de chaque élève.</p>
+    <div class="story">
+      <div class="card"><div class="num">1</div><h3>L'italique, le mouvement</h3><p>Les lettres penchées vers l'avant donnent de l'élan : on avance, on progresse, on part conduire.</p></div>
+      <div class="card"><div class="num">2</div><h3>La route qui monte</h3><p>La route s'affine et s'élève vers la droite : c'est le chemin vers le permis et la réussite.</p></div>
+      <div class="card"><div class="num">3</div><h3>Le bleu nuit et l'or</h3><p>Le bleu inspire la confiance et le sérieux. L'or évoque l'excellence, la réussite et le soleil du Mali.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">02 · Déclinaisons</span>
+    <h2>Les versions du logo</h2>
+    <p class="lead">Choisis la version selon le fond. Le logo doit toujours rester bien lisible et bien contrasté.</p>
+    <div class="versions">
+      <div class="panel p-light">
+        <svg class="wm art" viewBox="0 0 320 132"><use href="#wm"/></svg>
+        <div class="cap"><b>Principale · fond clair</b><span>logo-horizontal.svg</span></div>
+      </div>
+      <div class="panel p-dark">
+        <svg class="wm art" viewBox="0 0 320 132"><use href="#wm"/></svg>
+        <div class="cap"><b>Négative · fond sombre</b><span>logo-horizontal-negatif.svg</span></div>
+      </div>
+      <div class="panel p-mono">
+        <svg class="wm art" viewBox="0 0 320 132"><use href="#wm"/></svg>
+        <div class="cap"><b>Monochrome · tampon, gravure</b><span>logo-monochrome.svg</span></div>
+      </div>
+      <div class="panel p-gold">
+        <svg class="wm art" viewBox="0 0 320 132"><use href="#wm"/></svg>
+        <div class="cap"><b>Sur fond or · objets publicitaires</b><span>usage ponctuel</span></div>
+      </div>
+      <div class="panel p-light">
+        <div class="icons">
+          <figure><svg width="112" height="112"><use href="#ic"/></svg><figcaption>Icône · réseaux sociaux</figcaption></figure>
+          <figure><svg width="48" height="48"><use href="#fav"/></svg><figcaption>48 px</figcaption></figure>
+          <figure><svg width="32" height="32"><use href="#fav"/></svg><figcaption>32 px</figcaption></figure>
+          <figure><svg width="16" height="16"><use href="#fav"/></svg><figcaption>16 px</figcaption></figure>
+        </div>
+        <div class="cap"><b>Icône &amp; favicon</b><span>logo-icone.svg · logo-favicon.svg</span></div>
+      </div>
+      <div class="panel p-light">
+        <div class="art" style="max-width:220px">
+          <svg width="76" height="76" style="display:block;margin:0 auto 10px"><use href="#ic"/></svg>
+          <svg class="wm" viewBox="0 0 320 132"><use href="#wm"/></svg>
+        </div>
+        <div class="cap"><b>Verticale · enseigne, affiche</b><span>logo-vertical.svg</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap build">
+    <div class="build-box">
+      <svg viewBox="-40 -30 400 192" style="width:100%;display:block">
+        <rect x="-32" y="-22" width="384" height="176" fill="none" stroke="#f5b301" stroke-dasharray="4 4"/>
+        <rect x="0" y="0" width="320" height="132" fill="#f5b301" fill-opacity=".07"/>
+        <use href="#wm" width="320" height="132"/>
+        <text x="-30" y="-8" font-family="Inter" font-size="9" fill="#e09600">zone de protection = hauteur d'une majuscule (x)</text>
+        <line x1="-32" y1="164" x2="0" y2="164" stroke="#e09600"/>
+        <text x="-19" y="160" font-family="Inter" font-size="9" fill="#e09600">x</text>
+      </svg>
+    </div>
+    <ul class="rules">
+      <li><b>Zone de protection</b><span>Garde autour du logo un espace vide au moins égal à la hauteur d'une majuscule. Aucun texte ni image n'y entre.</span></li>
+      <li><b>Taille minimale</b><span>Logo complet : 120 px de large à l'écran, 30 mm à l'impression. En dessous, utilise l'icône.</span></li>
+      <li><b>Ne pas séparer</b><span>Le nom, la route et la mention « Auto-école · Bamako » forment un bloc indivisible.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">03 · Couleurs</span>
+    <h2>La palette</h2>
+    <p class="lead">Deux couleurs principales, le bleu nuit et l'or, accompagnées de deux tons de soutien.</p>
+    <div class="colors">
+      <div class="sw"><div class="chip" style="background:var(--ink);color:#fff">Bleu nuit</div><div class="meta"><b>#0D1B2A</b><br>RVB 13 · 27 · 42<br>CMJN 100 · 75 · 45 · 70</div></div>
+      <div class="sw"><div class="chip" style="background:var(--gold);color:var(--ink)">Or Berrah</div><div class="meta"><b>#F5B301</b><br>RVB 245 · 179 · 1<br>CMJN 0 · 30 · 100 · 0</div></div>
+      <div class="sw"><div class="chip" style="background:var(--gold-deep);color:var(--ink)">Or profond</div><div class="meta"><b>#E09600</b><br>Textes or sur fond clair</div></div>
+      <div class="sw"><div class="chip" style="background:var(--paper);color:var(--ink)">Sable</div><div class="meta"><b>#F6F4EF</b><br>Fonds clairs</div></div>
+    </div>
+    <div class="gradbar">Dégradé de la route · #D98A00 → #FFCF3A → #F5B301</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">04 · Typographie</span>
+    <h2>Les polices</h2>
+    <p class="lead">Deux polices gratuites de Google Fonts, faciles à installer sur tous les ordinateurs.</p>
+    <div class="type">
+      <div class="card">
+        <span class="eyebrow">Titres &amp; logo</span>
+        <div class="big" style="font-weight:800;font-style:italic">Plus Jakarta Sans</div>
+        <p class="alpha" style="font-family:'Plus Jakarta Sans';font-weight:700">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz 0123456789</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow">Textes courants</span>
+        <div class="big" style="font-family:Inter;font-weight:600">Inter</div>
+        <p class="alpha" style="font-family:Inter">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz 0123456789</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">05 · À éviter</span>
+    <h2>Les interdits</h2>
+    <p class="lead">Ces erreurs abîment l'image de l'auto-école. Utilise toujours les fichiers officiels.</p>
+    <div class="donts">
+      <div class="dont"><div class="art"><svg viewBox="0 0 320 132" style="transform:scale(1.3,.7);color:var(--ink)"><use href="#wm"/></svg></div><p>Déformer ou étirer le logo</p></div>
+      <div class="dont"><div class="art"><svg viewBox="0 0 320 132" style="color:#c2185b;--road:#2e7d32;--tag:#c2185b"><use href="#wm"/></svg></div><p>Changer les couleurs</p></div>
+      <div class="dont"><div class="art"><svg viewBox="0 0 320 132" style="transform:rotate(-14deg) scale(.85);color:var(--ink)"><use href="#wm"/></svg></div><p>Faire pivoter le logo</p></div>
+      <div class="dont"><div class="art" style="background:repeating-linear-gradient(45deg,#f5b301 0 10px,#ffcf3a 10px 20px);border-radius:10px"><svg viewBox="0 0 320 132" style="color:#fff;--tag:#fff"><use href="#wm"/></svg></div><p>Le poser sur un fond chargé ou peu contrasté</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">06 · Applications</span>
+    <h2>Le logo en situation</h2>
+    <p class="lead">Quelques exemples pour visualiser la marque sur ses supports du quotidien.</p>
+    <div class="mocks">
+      <div class="mock m-cards">
+        <div class="bc front"><svg class="wm" viewBox="0 0 320 132"><use href="#wm"/></svg></div>
+        <div class="bc back">
+          <div><b>Prénom Nom</b>Moniteur agréé</div>
+          <div class="l">(+223) 71 81 74 14<br>contact@leberrah.ml<br>Niamana, Route de Ségou</div>
+        </div>
+      </div>
+      <div class="mock m-social">
+        <div class="phone">
+          <div class="cover"></div>
+          <div class="pf"><svg width="62" height="62"><use href="#ic"/></svg><div><b>Auto-école Le Berrah</b><small>Niamana · Bamako</small></div></div>
+          <div class="btn">Inscris-toi sur WhatsApp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">07 · Fichiers</span>
+    <h2>Télécharger le logo</h2>
+    <p class="lead">Fichiers vectoriels SVG : ils restent nets à toutes les tailles, de la carte de visite à l'enseigne.</p>
+    <div class="files">
+      <a class="file" href="logo-horizontal.svg" download><span class="th"><svg class="wm" viewBox="0 0 320 132"><use href="#wm"/></svg></span><span><b>Logo principal</b><small>logo-horizontal.svg</small></span></a>
+      <a class="file" href="logo-horizontal-negatif.svg" download><span class="th dk"><svg class="wm" viewBox="0 0 320 132"><use href="#wm"/></svg></span><span><b>Logo négatif</b><small>logo-horizontal-negatif.svg</small></span></a>
+      <a class="file" href="logo-monochrome.svg" download><span class="th" style="color:#000;--road:#000;--tag:#000;--dash:#fff"><svg class="wm" viewBox="0 0 320 132"><use href="#wm"/></svg></span><span><b>Monochrome</b><small>logo-monochrome.svg</small></span></a>
+      <a class="file" href="logo-vertical.svg" download><span class="th"><svg width="36" height="36"><use href="#ic"/></svg></span><span><b>Logo vertical</b><small>logo-vertical.svg</small></span></a>
+      <a class="file" href="logo-icone.svg" download><span class="th"><svg width="36" height="36"><use href="#ic"/></svg></span><span><b>Icône</b><small>logo-icone.svg</small></span></a>
+      <a class="file" href="logo-favicon.svg" download><span class="th"><svg width="28" height="28"><use href="#fav"/></svg></span><span><b>Favicon</b><small>logo-favicon.svg</small></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="wm fl" viewBox="0 0 320 132"><use href="#wm"/></svg>
+    <span>Charte graphique Le Berrah · Niamana, Route de Ségou, Bamako</span>
+  </div>
+</footer>
+
+</body>
+</html>

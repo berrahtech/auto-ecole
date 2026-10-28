@@ -12,11 +12,11 @@
     content="L'auto-école moderne de Niamana. Pédagogie innovante, moniteurs expérimentés, réussite garantie.">
   <meta property="og:type" content="website">
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d1b2a'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%23f5b301'>B</text></svg>">
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='28' fill='%230d1b2a'/><text x='58' y='74' text-anchor='middle' font-family='Arial' font-size='80' font-weight='800' font-style='italic' fill='%23fff'>B</text><path d='M0 106 C 40 105, 80 96, 120 70 L120 66 C 80 88, 40 92, 0 91 Z' fill='%23f5b301'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet">
 
   <style>
@@ -224,42 +224,24 @@
       gap: 12px
     }
 
-    .logo-mark {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      flex-shrink: 0;
-      background: linear-gradient(135deg, var(--ink) 0%, var(--ink-3) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-family: 'Plus Jakarta Sans';
-      font-weight: 800;
-      font-size: 1.35rem;
-      box-shadow: 0 8px 20px rgba(13, 27, 42, .25);
-    }
-
-    .logo-name {
-      font-family: 'Plus Jakarta Sans';
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: -.02em;
-      color: var(--ink);
-      line-height: 1.1
-    }
-
-    .logo-name small {
+    /* Logo « Signature Route » : le nom suit `color`, la mention suit --tag */
+    .logo-svg {
       display: block;
-      font-size: .62rem;
-      font-weight: 700;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: var(--gold-deep)
+      height: 44px;
+      width: auto;
+      color: var(--ink);
+      --tag: var(--gold-deep);
+      transition: color .3s
     }
 
-    header:not(.scrolled) .logo-name {
+    header:not(.scrolled) .logo-svg {
       color: #fff
+    }
+
+    .footer-brand .logo-svg {
+      height: 76px;
+      color: #fff;
+      --tag: var(--gold)
     }
 
     @media (min-width:901px) {
@@ -1817,14 +1799,32 @@
 
 <body>
 
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="logoGold" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#d98a00" />
+        <stop offset=".5" stop-color="#ffcf3a" />
+        <stop offset="1" stop-color="#f5b301" />
+      </linearGradient>
+      <symbol id="logo-wm" viewBox="0 0 320 132">
+        <text x="4" y="58" font-family="Plus Jakarta Sans" font-weight="800" font-style="italic" font-size="52"
+          letter-spacing="-1.5" fill="currentColor">LE BERRAH</text>
+        <path d="M0 108 C 110 107, 220 96, 318 64 L316 63.8 C 218 89, 108 93, 0 91 Z" fill="url(#logoGold)" />
+        <path d="M0 99.5 C 110 99, 219 92.5, 317 63.9" fill="none" stroke="#0d1b2a" stroke-width="1.5"
+          stroke-dasharray="10 7" />
+        <text x="5" y="127" font-family="Plus Jakarta Sans" font-weight="700" font-size="11.5" letter-spacing="6.5"
+          style="fill:var(--tag,#e09600)">AUTO-ÉCOLE · BAMAKO</text>
+      </symbol>
+    </defs>
+  </svg>
+
   <div id="progress"></div>
 
   <!-- ================= HEADER ================= -->
   <header id="header">
     <div class="container header-inner">
-      <a href="#accueil" class="logo">
-        <div class="logo-mark">B</div>
-        <div class="logo-name">LE BERRAH<small>Auto-école</small></div>
+      <a href="#accueil" class="logo" aria-label="Auto-école Le Berrah — accueil">
+        <svg class="logo-svg" viewBox="0 0 320 110" aria-hidden="true"><use href="#logo-wm" width="320" height="132" /></svg>
       </a>
       <button class="burger" id="burger" aria-label="Menu"><span></span></button>
       <nav>
@@ -2398,9 +2398,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#accueil" class="logo">
-            <div class="logo-mark">B</div>
-            <div class="logo-name" style="color:#fff">LE BERRAH<small>Auto-école</small></div>
+          <a href="#accueil" class="logo" aria-label="Auto-école Le Berrah — accueil">
+            <svg class="logo-svg" viewBox="0 0 320 132" aria-hidden="true"><use href="#logo-wm" /></svg>
           </a>
           <p>Référence de la formation à la conduite au Mali. Nous formons avec rigueur pour garantir votre sécurité et
             celle des autres sur la route.</p>
